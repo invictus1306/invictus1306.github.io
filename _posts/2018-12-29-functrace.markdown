@@ -109,7 +109,7 @@ $ python3 beebug.py -i -r report2
 
 The report file is a *png* file
 
-![1546005543085](https://github.com/invictus1306/invictus1306.github.io/blob/master/res/functrace/1546005543085.png)
+![1546005543085](https://raw.githubusercontent.com/invictus1306/invictus1306.github.io/master/res/functrace/report.PNG)
 
 
 
