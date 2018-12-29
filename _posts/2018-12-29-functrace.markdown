@@ -15,12 +15,12 @@ So I decided to write this small [tool](https://github.com/invictus1306/functrac
 
 These are some implemented features:
 
-[ ] disassemble all the executed code
-[ ] disassemble a specific function
-[ ] get arguments of a specific function
-[ ] get return value of a specific function
-[ ] monitors application signals
-[ ] generate a report file
+* disassemble all the executed code
+* disassemble a specific function
+* get arguments of a specific function
+* get return value of a specific function
+* monitors application signals
+* generate a report file
 
 The generated report file can be parsed by [beebug](https://github.com/invictus1306/beebug).
 
