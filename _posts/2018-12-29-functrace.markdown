@@ -11,16 +11,16 @@ I often use tools like *strace*, *ltrace*, *frida-trace* to get some basic runti
 
 These are all excellent tools, but sometimes I need specific information about functions (symbols access), I need to see the disassembled code only for certain portions of code etc.
 
-So I decided to write this small [tool](), using [DynamoRio](http://dynamorio.org/).
+So I decided to write this small [tool](https://github.com/invictus1306/functrace), using [DynamoRio](http://dynamorio.org/).
 
 These are some implemented features:
 
-- [ ] disassemble all the executed code
-- [ ] disassemble a specific function
-- [ ] get arguments of a specific function
-- [ ] get return value of a specific function
-- [ ] monitors application signals
-- [ ] generate a report file
+[ ] disassemble all the executed code
+[ ] disassemble a specific function
+[ ] get arguments of a specific function
+[ ] get return value of a specific function
+[ ] monitors application signals
+[ ] generate a report file
 
 The generated report file can be parsed by [beebug](https://github.com/invictus1306/beebug).
 
@@ -203,7 +203,7 @@ We are ready to go on with the analysis, we already know the problem, this has b
 1. *0x40659a*
 2. *0x4066b7*
 
-##### Address 0x40659a
+**Address 0x40659a**
 
 ```asm
 0x0040659a      c60100         mov byte [rcx], 0
