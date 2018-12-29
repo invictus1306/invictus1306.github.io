@@ -4,8 +4,6 @@ title:  "From vulnerability report to a crafted packet using instrumentation"
 date:   2018-12-29 14:29:22 +0100
 categories: vulnerabilitis
 ---
-## From vulnerability report to a crafted packet using instrumentation
-
 During these Christmas holidays, I finally had time to implement a small tool that uses dynamic binary instrumentation (*DBI*) to do some runtime checks, that we will see in detail in this post.
 I often use tools like *strace*, *ltrace*, *frida-trace* to get some basic runtime information without using a real debugger. 
 
@@ -122,7 +120,7 @@ $ drrun -c libfunctrace.so -report_file report3 -disas_func RTSPServer::RTSPClie
 the [report3](https://github.com/invictus1306/invictus1306.github.io/blob/master/res/functrace/report3) file contains all the information that we need:
 
 ```shell
-[ARG] Arg 0: 0x6a6900` 
+[ARG] Arg 0: 0x6a6900 
 [ARG] Arg 1: 0x7ffd0cc73430
 [ARG] Arg 2: 0xc8
 [ARG] Arg 3: 0x7ffd0cc735d0
