@@ -1,6 +1,7 @@
 ---
-layout: default
-is_contact: true
+layout: page
+title: Contact
+permalink: /contact/
 ---
 
 ## Social
