@@ -30,7 +30,7 @@ A few months ago, [Cisco Talos](https://www.talosintelligence.com) released the 
 
 > An exploitable code execution vulnerability exists in the HTTP packet-parsing functionality of the LIVE555 RTSP server library version 0.92. A specially crafted packet can cause a stack-based buffer overflow, resulting in code execution. An attacker can send a packet to trigger this vulnerability.	
 
-We will see how to build a crafted packet that give raise to the stack buffer overflow with the help of the *[functrace*](https://github.com/invictus1306/functrace) client.
+We will see how to build a crafted packet that give raise to the stack buffer overflow with the help of the *[functrace]*(https://github.com/invictus1306/functrace) client.
 
 You can download the vulnerable version [here](https://download.videolan.org/contrib/live555/) (I downloaded *live.2018.10.10.tar.gz*) and compile it with the default options.
 
