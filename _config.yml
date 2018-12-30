@@ -1,8 +1,8 @@
+# --- General options --- #
 
 # Site settings
 title: Andrea Sindoni - @invictus1306
-description: It is not people who break ethical standards who are regarded as aliens; it is people like me, who are isolated. 
-Grigori Perelman
+description: It is not people who break ethical standards who are regarded as aliens; it is people like me, who are isolated. Grigori Perelman
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://github.com/invictus1306" # the base hostname & protocol for your site
 twitter_username: invictus1306
