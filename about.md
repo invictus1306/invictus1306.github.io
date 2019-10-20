@@ -8,7 +8,7 @@ permalink: /about/
 
 I am a security researcher focusing on reverse engineering, vulnerability research and exploit development. I have experience in low level OS and Linux Kernel development.
 
-## Publications
+## Articles
 
 __From vulnerability report to a crafted packet using instrumentation__<br/>
 Year: 2019<br/>
@@ -47,6 +47,10 @@ Year: 2012<br/>
 Link: http://www.html.it/guide/guida-python/<br/>
 
 ## Conferences / Workshops
+__Title - functrace: A quick way to analyze binaries - Talk__<br/>
+Conference: @WarConPL<br/>
+Year: 2019 (June)<br/>
+Link: https://github.com/invictus1306/functrace<br/>
 
 __Title - Bug classification with r2 - Talk__<br/>
 Conference: r2con<br/>
@@ -78,6 +82,8 @@ Year: 2015<br/>
 Link: https://www.exploit-db.com/exploits/38485/<br/>
 
 ## Open source
+__QuickPatch__<br/>
+Link: https://github.com/invictus1306/QuickPatch<br/>
 
 __functrace - A function tracer__<br/>
 Link: https://github.com/invictus1306/functrace<br/>

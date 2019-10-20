@@ -2,10 +2,10 @@
 layout: post
 title:  "From vulnerability report to a crafted packet using instrumentation"
 date:   2018-12-29 14:29:22 +0100
-categories: vulnerabilitis
+categories: vulnerabilities
 ---
 During these Christmas holidays, I finally had time to implement a small tool that uses dynamic binary instrumentation (*DBI*) to do some runtime checks, that we will see in detail in this post.
-I often use tools like *strace*, *ltrace*, *frida-trace* to get some basic runtime information without using a real debugger. 
+I often use tools like *strace*, *ltrace*, *frida-trace* to get some basic runtime information without using a real debugger.
 
 These are all excellent tools, but sometimes I need specific information about functions (symbols access), I need to see the disassembled code only for certain portions of code etc.
 
@@ -26,7 +26,7 @@ The generated report file can be parsed by [beebug](https://github.com/invictus1
 
 A few months ago, [Cisco Talos](https://www.talosintelligence.com) released the [report](https://www.talosintelligence.com/vulnerability_reports/TALOS-2018-0684) for a vulnerability on the [LIVE555 RTSP](http://www.live555.com/) server library, an excellent report, but the crafted packet is not there. This is the [description](https://www.cvedetails.com/cve/CVE-2018-4013/):
 
-> An exploitable code execution vulnerability exists in the HTTP packet-parsing functionality of the LIVE555 RTSP server library version 0.92. A specially crafted packet can cause a stack-based buffer overflow, resulting in code execution. An attacker can send a packet to trigger this vulnerability.	
+> An exploitable code execution vulnerability exists in the HTTP packet-parsing functionality of the LIVE555 RTSP server library version 0.92. A specially crafted packet can cause a stack-based buffer overflow, resulting in code execution. An attacker can send a packet to trigger this vulnerability.
 
 We will see how to build a crafted packet that give raise to the stack buffer overflow with the help of the *[functrace]*(https://github.com/invictus1306/functrace) client.
 
@@ -66,7 +66,7 @@ This is the [report1](https://github.com/invictus1306/invictus1306.github.io/blo
 
 is there, a good start.
 
-From the *Cisco Talos* report, we can see that the *lookForHeader* function is really important, that's where the overflow takes place. 
+From the *Cisco Talos* report, we can see that the *lookForHeader* function is really important, that's where the overflow takes place.
 
 Our first client (*[client1.py](https://github.com/invictus1306/invictus1306.github.io/blob/master/res/functrace/client1.py)*) is good, but it must be improved. It might be useful to see the disassembled function (*parseHTTPRequestString*), and we can use *[functrace](https://github.com/invictus1306/functrace)* for this purpose:
 
@@ -120,14 +120,14 @@ $ drrun -c libfunctrace.so -report_file report3 -disas_func RTSPServer::RTSPClie
 the [report3](https://github.com/invictus1306/invictus1306.github.io/blob/master/res/functrace/report3) file contains all the information that we need:
 
 ```shell
-[ARG] Arg 0: 0x6a6900 
+[ARG] Arg 0: 0x6a6900
 [ARG] Arg 1: 0x7ffd0cc73430
 [ARG] Arg 2: 0xc8
 [ARG] Arg 3: 0x7ffd0cc735d0
 [ARG] Arg 4: 0xc8
 [ARG] Arg 5: 0x7ffd0cc73840
-[ARG] Arg 6: 0xc8 
-[ARG] Arg 7: 0x7ffd0cc73910 
+[ARG] Arg 6: 0xc8
+[ARG] Arg 7: 0x7ffd0cc73910
 
 [RET] Function: RTSPServer::RTSPClientConnection::parseHTTPRequestString ret_value: 0x0
 ```
@@ -149,7 +149,7 @@ This is one of the last basic blocks
  Open the server with [radare2](https://rada.re/r/) (in order to have the whole code)
 
 ```assembly
-[0x004067a9]> s 0x4067a9 
+[0x004067a9]> s 0x4067a9
 [0x004067a9]> pd 10
 |      ::   0x004067a9      418d4201       lea eax, [r10 + 1]     ; 1
 |      ::   0x004067ad      4189c2         mov r10d, eax
