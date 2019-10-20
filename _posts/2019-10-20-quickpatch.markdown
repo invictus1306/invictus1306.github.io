@@ -4,7 +4,6 @@ title:  "QuickPatch"
 date:   2019-10-20
 categories: vulnerabilities
 ---
-# QuickPatch
 [QuickPatch](https://github.com/invictus1306/QuickPatch) is mainly a GDB plug-in giving users the ability to patch an ELF file quickly, just by write the instructions to patch.
 
 With *QuickPatch* is also possible to patch/disassemble a binary file for the architectures x86-32 x86-64 arm and arm64.   
